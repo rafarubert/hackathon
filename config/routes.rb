@@ -1,4 +1,8 @@
 Atlas::Application.routes.draw do
+  resources :busca, :only => [:index]
+
+  post "busca/resultado"
+
   devise_for :users
 
   resources :chamados do
