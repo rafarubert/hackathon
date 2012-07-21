@@ -4,8 +4,6 @@
   <%= submit_tag :buscar %>
 <% end %>
 
-<h1>Resultado da Busca</h1>
-<p>
-  <%= params[:chave_busca] %>
-</p>
-<%= link_to "Voltar", :busca_index %>
+<%if @faqs.empty? %>
+	<% render_partial :list %>
+<% %>

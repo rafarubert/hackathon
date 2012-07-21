@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'sqlite3'
+gem 'mysql2', '0.3.11'
 
 gem 'devise'
 

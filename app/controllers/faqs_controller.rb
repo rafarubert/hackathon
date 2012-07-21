@@ -1,9 +1,9 @@
 class FaqsController < ApplicationController
   
   def index
-    if params[:chave_busca].exists? 
-      
-    end
+
+    
+    @faqs = Faq.all
   end
   
 end
