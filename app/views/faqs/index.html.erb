@@ -1,8 +1,10 @@
 <h1>Busca faq</h1>
+
 <%= form_tag(:action => "index", :method => :get ) do %>
   <%= text_field_tag :chave_busca %>
   <%= submit_tag :buscar %>
 <% end %>
+
 
 <% unless @faqs.results.empty? %>
   <h1>Resultado da Busca</h1>

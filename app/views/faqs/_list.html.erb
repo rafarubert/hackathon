@@ -1,5 +1,15 @@
-<h1>Resultado da Busca</h1>
-<p>
-  <%= params[:chave_busca] %>
-</p>
-<%= link_to "Voltar", :busca_index %>
+<table>
+	<tr>
+		<td>Pergunta</td>
+		<td>Resposta</td>
+	</tr>
+	
+<%for faq in @faqs do %>
+	<tr>
+		<td><%= faq.pergunta %></td>
+		<td><%= faq.resposta %></td>
+	</tr>
+<%end%>
+</table>
+	
+<%#= link_to "Voltar", :busca %>
