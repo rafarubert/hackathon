@@ -6,4 +6,10 @@ class Faq < ActiveRecord::Base
   searchable do
       text :pergunta, :resposta
   end
+  
+  def self.busca_indexada chave_busca
+    Faq.search do
+      fulltext chave_busca
+    end
+  end
 end

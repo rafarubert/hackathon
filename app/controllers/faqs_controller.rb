@@ -1,10 +1,5 @@
 class FaqsController < ApplicationController
   def index
-
-    @faqs = Faq.search do
-      fulltext params[:chave_busca]
-    end
-
+    Faq.busca_indexada(params[:chave_busca])
   end
-
 end
