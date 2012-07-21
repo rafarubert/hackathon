@@ -1,0 +1,11 @@
+<h1>Busca faq</h1>
+<%= form_tag(:action => "resultado", :method => :post ) do %>
+  <%= text_field_tag :chave_busca %>
+  <%= submit_tag :buscar %>
+<% end %>
+
+<h1>Resultado da Busca</h1>
+<p>
+  <%= params[:chave_busca] %>
+</p>
+<%= link_to "Voltar", :busca_index %>
