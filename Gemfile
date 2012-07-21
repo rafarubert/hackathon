@@ -19,7 +19,8 @@ gem 'rspec-rails', '2.10.1'
 gem 'factory_girl', '3.5.0'
 gem 'database_cleaner', '0.8.0'
 gem 'simplecov', '0.6.4'
-gem 'shoulda', '3.0.1', :require => false
+gem 'shoulda-matchers'
 
 gem 'jquery-rails', '2.0.2'
 gem 'debugger', '1.1.4'
+
