@@ -27,6 +27,6 @@ Atlas::Application.routes.draw do
     end
   end
 
-  root :to => "chamados#index"
+#  root :to => "chamados#index"
 
 end
