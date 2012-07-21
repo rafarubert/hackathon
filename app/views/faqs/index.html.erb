@@ -1,9 +1,19 @@
 <h1>Busca faq</h1>
-<%= form_tag(:action => "resultado", :method => :post ) do %>
+<%= form_tag(:action => "index", :method => :get ) do %>
   <%= text_field_tag :chave_busca %>
   <%= submit_tag :buscar %>
 <% end %>
 
-<%if @faqs.empty? %>
-	<% render_partial :list %>
-<% %>
+<% unless @faqs.results.empty? %>
+  <h1>Resultado da Busca</h1>
+  <p>
+    <%= params[:chave_busca] %>
+  </p>
+  <% @faqs.results.each do |faq| %>
+    <p>
+      <%= faq.pergunta%>
+      <br />
+      <%= faq.resposta %>
+    </p>
+  <% end %>
+<% end %>

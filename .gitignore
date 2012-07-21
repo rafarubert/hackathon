@@ -16,3 +16,4 @@
 
 coverage/*
 sunspot-solr.pid
+solr/data/

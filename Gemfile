@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
 gem 'sqlite3'
-gem 'mysql2', '0.3.11'
 
 gem 'devise'
 
 gem 'sunspot_rails'
 gem 'sunspot_solr'
+gem 'sunspot_matchers'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
