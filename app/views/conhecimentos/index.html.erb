@@ -1,0 +1,25 @@
+<h1>Listing conhecimentos</h1>
+
+<table>
+  <tr>
+    <th>Pergunta</th>
+    <th>Resposta</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @conhecimentos.each do |conhecimento| %>
+  <tr>
+    <td><%= conhecimento.pergunta %></td>
+    <td><%= conhecimento.resposta %></td>
+    <td><%= link_to 'Show', conhecimento %></td>
+    <td><%= link_to 'Edit', edit_conhecimento_path(conhecimento) %></td>
+    <td><%= link_to 'Destroy', conhecimento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Conhecimento', new_conhecimento_path %>
