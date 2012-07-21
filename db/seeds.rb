@@ -66,7 +66,12 @@ concluido = FactoryGirl.create(:status, :nome => 'Concluído')
 
 puts "Status criados"
 
-
 FactoryGirl.create(:chamado, :titulo => 'Falha na Fatura', :responsavel => katia, :cliente => cliente, :natureza => erro, :status => andamento)
 FactoryGirl.create(:chamado, :titulo => 'Estoque duplicado', :responsavel => joao, :cliente => cliente2, :natureza => duvida, :status => iniciar)
 FactoryGirl.create(:chamado, :titulo => 'Relatório novo', :responsavel => isabel, :cliente => cliente3, :natureza => customizacao, :status => concluido)
+
+FactoryGirl.create(:faq1)
+FactoryGirl.create(:faq2)
+FactoryGirl.create(:faq3)
+
+puts "Faqs criados"
