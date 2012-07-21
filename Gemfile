@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-gem 'mysql2', '0.3.11'
+gem 'sqlite3'
 
 gem 'devise'
 
@@ -22,5 +22,5 @@ gem 'simplecov', '0.6.4'
 gem 'shoulda-matchers'
 
 gem 'jquery-rails', '2.0.2'
-gem 'debugger', '1.1.4'
 
+gem 'debugger', '1.1.4'
