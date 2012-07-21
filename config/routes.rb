@@ -1,4 +1,6 @@
 Atlas::Application.routes.draw do
+  resources :conhecimentos
+
   devise_for :users
 
   resources :chamados do
@@ -27,6 +29,6 @@ Atlas::Application.routes.draw do
     end
   end
 
-#  root :to => "chamados#index"
+ root :to => "conhecimentos#index"
 
 end
