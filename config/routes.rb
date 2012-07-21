@@ -3,7 +3,7 @@ Atlas::Application.routes.draw do
 
   post "busca/resultado"
 
-  resources :conhecimentos
+  resources :faqs
 
   devise_for :users
 
@@ -33,6 +33,6 @@ Atlas::Application.routes.draw do
     end
   end
 
- root :to => "conhecimentos#index"
+ root :to => "faqs#index"
 
 end

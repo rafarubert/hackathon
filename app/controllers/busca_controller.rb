@@ -3,5 +3,6 @@ class BuscaController < ApplicationController
   end
 
   def resultado
+    
   end
 end
