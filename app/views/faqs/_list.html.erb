@@ -1,15 +1,16 @@
-<table>
+<table border=1>
 	<tr>
-		<td>Pergunta</td>
-		<td>Resposta</td>
+		<td><b>Pergunta</b></td>
+		<td><b>Resposta</b></td>
 	</tr>
-	
-<%for faq in @faqs do %>
-	<tr>
-		<td><%= faq.pergunta %></td>
-		<td><%= faq.resposta %></td>
-	</tr>
-<%end%>
+
+  <% @faqs.results.each do |faq| %>
+  	<tr>
+  		<td><%= faq.pergunta %></td>
+  		<td><%= faq.resposta %></td>
+  	</tr>
+  <%end%>
 </table>
-	
-<%#= link_to "Voltar", :busca %>
+
+<br />
+<%= link_to "Voltar", root_path %>

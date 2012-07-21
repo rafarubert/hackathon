@@ -1,7 +1,7 @@
 Atlas::Application.routes.draw do
 
   resources :faqs
-   
+
   devise_for :users
 
   resources :chamados do
@@ -9,20 +9,20 @@ Atlas::Application.routes.draw do
       get :adicionar_tramite
     end
   end
-  
+
   resources :sistemas
-  
+
   resources :clientes do  
     resources :sistemas, :only => [:por_cliente] do
       collection do
         get :por_cliente
       end
-      
+
       member do
         get :contrato
       end
     end
-    
+
     resources :contatos, :only => [:por_cliente] do
       collection do
         get :por_cliente
@@ -31,5 +31,4 @@ Atlas::Application.routes.draw do
   end
 
  root :to => "faqs#index"
-
 end

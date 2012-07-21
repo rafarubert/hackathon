@@ -4,11 +4,13 @@ class Faq < ActiveRecord::Base
   validates_presence_of :pergunta, :resposta
 
   searchable do
-      text :pergunta, :resposta
+      text :pergunta, :stored => true
+      text :resposta, :stored => true
   end
-  
+
   def self.busca_indexada chave_busca
-    search = Faq.search { fulltext chave_busca }
-    search.results
+    Faq.search do
+      fulltext chave_busca, :highlight => true
+    end
   end
 end
