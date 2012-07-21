@@ -10,15 +10,18 @@ require 'rspec/autorun'
 require 'shoulda-matchers'
 require 'database_cleaner'
 
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 Dir[Rails.root.join("spec/factories/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
+  config.include SunspotMatchers
 
   config.before(:each) do
     DatabaseCleaner.strategy = :transaction
+    Sunspot.session = SunspotMatchers::SunspotSessionSpy.new(Sunspot.session)
   end
 
   config.include Devise::TestHelpers, :type => :controller

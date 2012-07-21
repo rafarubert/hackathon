@@ -8,8 +8,7 @@ class Faq < ActiveRecord::Base
   end
   
   def self.busca_indexada chave_busca
-    Faq.search do
-      fulltext chave_busca
-    end
+    search = Faq.search { fulltext chave_busca }
+    search.results
   end
 end
